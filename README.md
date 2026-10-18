@@ -1,5 +1,5 @@
-Behavior-Based Robot Simulation Using ROS2 and Gazebo
-
+**Behavior-Based Robot Simulation Using ROS2 and Gazebo
+**
 A mobile robot simulation built using Python, ROS2 and Gazebo.
 The project combines LiDAR-based perception with search, follow
 and stop behaviors.
