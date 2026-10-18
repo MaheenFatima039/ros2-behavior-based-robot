@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<robot name="diffbot">
+  <link name="base_link">
+    <visual>
+      <geometry><box size="0.4 0.3 0.1"/></geometry>
+    </visual>
+  </link>
+
+  <link name="lidar_link"/>
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+  </joint>
+
+  <gazebo reference="lidar_link">
+    <sensor name="lidar" type="ray">
+      <update_rate>10</update_rate>
+      <ray><scan><horizontal><samples>360</samples></horizontal></scan></ray>
+      <plugin filename="libgazebo_ros_ray_sensor.so" name="gazebo_ros_laser"/>
+    </sensor>
+  </gazebo>
+</robot>
+
